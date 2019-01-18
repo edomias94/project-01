@@ -1,21 +1,22 @@
 /* Global Layout Set-up */
 * { 
   box-sizing: border-box;
+  scroll-behavior: smooth;  
 }
   
 body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Sans';
   color: #222;
-  background: #f7f5f0;
+  background: black;
 }
 /* Link Styles */
 
 a {
   text-decoration: none;
-  color: #999;
+  color:white;
 }
 a:hover {
   color: #6633ff;
@@ -25,25 +26,27 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: black;
+  
   min-height: 30px;
   padding: 10px;
-  position: fixed;
-  text-align: center;
+   position: fixed;
+  background: rgba(0, 0, 0, 0.5);
 }
 .nav {
   display: flex;
   justify-content: space-around;
-  font-weight: 700;
+  font-weight: 400;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
+    
 }
 
 .nav .name {
     display: block;
     margin-right: auto;
-    color: white;
+    color: blue;
+    font-size:18px;
 }
 .nav li {
   padding: 5px 10px 10px 10px;
@@ -52,51 +55,81 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
-  color: white
+  background-color: black;
+  color: yellow;
+  padding: 5px 10px 10px 10px;
 }
+
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/background-image3.jpg') no-repeat top center ;
+   
   background-size: cover;
   overflow: hidden;
-  padding-top: 60px;
+  padding: 100px 0 180px;
 }
 header {
   line-height: 1.5;
 }
 header .profile-image {
-  margin-top: 50px;
-  width: 150px;
-  height: 150px;
+  margin-top: 90px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
   border: 3px solid white;
   transition: all .5s;
+  
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+    transform: scale(1.2) rotate(720deg) skewY(9deg);
+    
+  transition-duration: 3s;
 }
+
 .tag {
-  background-color: #efefef;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
+
+  color: white;
+    font-size: 45px;
+    font-weight: 300;
+    font-style: italic;
+  background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+  
   display: table;
   margin: 10px auto;
 } 
 .location {
-  background-color: #222;
+  
   color: yellow;
+font-size: 35px;
+    font-weight: 600;
+    font-style: italic;
+    text-shadow: 3px 3px black;
 }
 .card {
-  margin: 30px;
+  margin: 50px;
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
-  background: #fff;
-  border-bottom: 4px solid #ccc;
+   
+   background: url('images/background-image2.jpg') no-repeat center center ; 
+    color:white;
+   
+    font-size:19px;
+  
+  border-right: 4px solid red;
+  border-left: 4px solid yellow;  
   border-radius: 6px;
   transition: all .5s;
+}
+.header-title{
+    font-size:35px;
+    color:yellow;
+    text-align: center;
+    text-shadow: 2px 7px black;
+    
+    background: rgba(0, 0, 0, 0.5);
 }
 .card:hover {
   border-color: #ff99ff;
@@ -109,7 +142,7 @@ ul.skills {
 
 .skills li {
   border-radius: 6px;
-  display: inline-block;
+  display: inline-flex;
   background: #ff9904;
   color: white;
   padding: 5px 10px;
@@ -120,10 +153,19 @@ ul.skills {
   background: #0399ff;
 }
 
+.contact-card{
+    background-color: gray;
+    color:black;
+    max-width: 1000px;
+    margin: 50px 0 50px 190px;
+    padding:20px;
+    
+    
+}
 footer {
   width: 100%;
   min-height: 30px;
-  padding: 20px 0 40px 20px;
+  padding: 30px 0 50px 30px;
 }
 
 footer .copyright {
@@ -148,20 +190,21 @@ a.social {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
-  opacity: .4;
+  
   transition: all .5s;
 }
 a.twitter {
-  background-image: url(images/twitter.svg);
+  background-image: url(images/ff.svg);
 }
 a.linkedin {
-  background-image: url(images/linkedin.svg);
+  background-image: url(images/in.svg);
 }
 a.github {
-  background-image: url(images/github.svg);
+  background-image: url(images/g.svg);
 }
 a.social:hover {
   opacity: 1;
+  transform: scale(1.6) rotate(360deg);  
 }
 .clearfix {
   clear: both;
