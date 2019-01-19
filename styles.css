@@ -93,8 +93,8 @@ header .profile-image {
 }
 
 header .profile-image:hover {
-    transform: scale(1.2) rotate(720deg) skewY(9deg);
-    transition-duration: 3s;
+    transform: scale(1.2) rotate(360deg) skewY(5deg);
+    transition-duration: 5s;
 }
 
 .tag {
@@ -172,6 +172,8 @@ ul.skills {
 
 
 }
+
+
 
 footer {
     width: 100%;
